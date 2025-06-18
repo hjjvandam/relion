@@ -7,7 +7,8 @@ if(NOT MKLFFT)
 endif(NOT MKLFFT)
 #include_directories(${CMAKE_BINARY_DIR}/include)
 
-find_path (X11_INCLUDES Xdbe.h)
+#find_path (X11_INCLUDES Xdbe.h)
+set(X11_INCLUDES ${X11_INCLUDE_DIR})
 
 message(STATUS "CMAKE_BINARY_DIR:" ${CMAKE_BINARY_DIR})
 
