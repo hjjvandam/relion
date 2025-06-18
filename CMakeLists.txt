@@ -455,7 +455,7 @@ endif()
 
 # --------------------------------------------------------------------------X11/FLTK--
 option(FORCE_OWN_FLTK "FORCE_OWN_FLTK" OFF)
-FIND_PACKAGE(X11)
+FIND_PACKAGE(X11_X11_LIB)
 if(GUI)
     if(X11_FOUND)
         set(FLTK_SKIP_FLUID TRUE) #FLUID is not required for relion
