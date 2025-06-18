@@ -455,7 +455,17 @@ endif()
 
 # --------------------------------------------------------------------------X11/FLTK--
 option(FORCE_OWN_FLTK "FORCE_OWN_FLTK" OFF)
-FIND_PACKAGE(X11_X11_LIB)
+FIND_PACKAGE(X11)
+#HVD
+#message(STATUS, "HVD: ${X11_INCLUDE_DIR}")
+#message(STATUS, "HVD: ${X11_Xlib_INCLUDE_DIR}")
+get_cmake_property(_variableNames VARIABLES)
+list (SORT _variableNames)
+message(STATUS, "HVD:")
+foreach (_variableName ${_variableNames})
+    message(STATUS "${_variableName}=${${_variableName}}")
+endforeach()
+#HVD
 if(GUI)
     if(X11_FOUND)
         set(FLTK_SKIP_FLUID TRUE) #FLUID is not required for relion
